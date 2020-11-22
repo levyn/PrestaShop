@@ -28,7 +28,7 @@
     {if $nodes|count}
       <ul class="category-sub-menu">
         {foreach from=$nodes item=node}
-          <li data-depth="{$depth}">
+          <li data-depth="{$depth}" class="{if $node.id == $category.id}active{/if}">
             {if $depth===0}
               <a href="{$node.link}">{$node.name}</a>
               {if $node.children}
